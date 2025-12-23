@@ -1,0 +1,37 @@
+TEST CASES FOR QR ID CARD SYSTEM
+=================================
+
+POSITIVE TEST CASES:
+1. Test Admin Login
+   Input: admin@school.com / Admin@123
+   Expected: Login successful
+   Status: ✅ PASS
+
+2. Test Student Login
+   Input: student1@school.com / Student@123
+   Expected: Login successful
+   Status: ✅ PASS
+
+3. Test QR Generation
+   Input: Logged in user
+   Expected: QR code generated
+   Status: ✅ PASS
+
+4. Test QR Scanning
+   Input: Valid QR code
+   Expected: User data extracted
+   Status: ✅ PASS
+
+NEGATIVE TEST CASES:
+5. Test Wrong Password
+   Input: admin@school.com / wrongpassword
+   Expected: Login failed
+   Status: ✅ PASS
+
+6. Test Wrong Email
+   Input: wrong@email.com / password
+   Expected: Login failed
+   Status: ✅ PASS
+
+TOTAL: 6 TEST CASES (4 Positive, 2 Negative)
+ALL TESTS PASSED ✅
