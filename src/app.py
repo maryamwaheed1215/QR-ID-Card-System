@@ -1,7 +1,10 @@
-# Main application - SIMPLE VERSION
+# Main application
 from auth import LoginSystem
 from qr_code import QRGenerator
-from flask import Flask, request, jsonify
+from flask import Flask, jsonify, request
+import webbrowser
+import threading
+import time
 
 app = Flask(__name__)
 
@@ -10,12 +13,12 @@ login_system = LoginSystem()
 qr_system = QRGenerator()
 current_user = None
 
-# HTML page
+# HTML page (your existing HTML code here)
 HTML = '''
 <!DOCTYPE html>
 <html>
 <head>
-    <title>QR ID Card System</title>
+    <title>QR ID System</title>
     <style>
         body { font-family: Arial; padding: 20px; max-width: 600px; margin: auto; }
         .box { background: #f0f8ff; padding: 20px; margin: 20px 0; border-radius: 10px; }
@@ -145,12 +148,18 @@ if __name__ == "__main__":
     print("=" * 50)
     print("🎫 QR ID Card System")
     print("=" * 50)
-    print("🌐 Open your browser and go to:")
-    print("   http://localhost:5000")
+    
+    # Function to open browser
+    def open_browser():
+        time.sleep(2)  # Wait for server to start
+        webbrowser.open("http://localhost:5000")
+        print("✅ Browser opened!")
+    
+    # Start browser thread
+    threading.Thread(target=open_browser).start()
+    
+    print("🌐 Opening browser automatically...")
+    print("   URL: http://localhost:5000")
     print("=" * 50)
-    print("Test Users:")
-    print("  Admin: admin@school.com / Admin@123")
-    print("  Student: student1@school.com / Student@123")
-    print("  Teacher: teacher1@school.com / Teacher@123")
-    print("=" * 50)
+    
     app.run(debug=True, port=5000)
