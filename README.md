@@ -8,7 +8,7 @@ A simple QR code based ID system for schools and organizations.
 |------|-------------------|
 | Maryam Waheed | 23MDBCS365 |
 | Hifsa Iqbal | 23MDBCS533 |
-| Sana Shaha | 23MDBCS512 | 
+| Sana Shah | 23MDBCS512 | 
 | Urooj Idrees | 23MDBCS536|
 
 **Supervisor:** Ma'am Faiza    
