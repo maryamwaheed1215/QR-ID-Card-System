@@ -11,9 +11,9 @@ A simple QR code based ID system for schools and organizations.
 | Sana Shaha | 23MDBCS512 | 
 | Urooj Idrees | 23MDBCS536|
 
-**Supervisor:** [Ma'am Faiza] 
-**Course:** [Software-Engineering] 
-**Submission Dated:** [1-Jan-2026]
+**Supervisor:** [Ma'am Faiza]   
+**Course:** [Software-Engineering]  
+**Submission Dated:** [1-Jan-2026]  
 ## Features
 - User Login System
 - QR Code Generation
